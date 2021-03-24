@@ -2,7 +2,7 @@ resource "aws_vpc" "mod" {
   cidr_block = "${var.cidr}"
   enable_dns_hostnames = "${var.enable_dns_hostnames}"
   enable_dns_support = "${var.enable_dns_support}"
-  tags {
+  tags = {
     Name = "${var.name}"
     project = "${var.project}"
     tf-module = "tf_aws_vpc"
